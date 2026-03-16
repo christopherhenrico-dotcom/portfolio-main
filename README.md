@@ -1,73 +1,120 @@
-# Welcome to your Lovable project
+# Christopher Henrico Portfolio
 
-## Project info
+A high-performance portfolio website for a full-stack engineer and serial founder. Built with modern web technologies and a cyberpunk-inspired aesthetic.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## About
 
-## How can I edit this code?
+This is the personal portfolio of **Christopher Henrico**, showcasing expertise in building technical foundations for fast-moving startups. The site features a distinctive "system operator" theme with monospace typography, scanline effects, and a dark, tech-forward design language.
 
-There are several ways of editing your application.
+## Features
 
-**Use Lovable**
+- **Hero Section** - Introduction with glitch animations and call-to-action buttons
+- **Proven Speed** - Highlights rapid delivery capabilities (48-hour Data Rooms, 2-week MVPs)
+- **Experience Log** - Professional history and achievements
+- **Tech Arsenal** - Technology stack and tools
+- **Portfolio Section** - Showcase of shipped projects
+- **Contact Uplink** - Contact form and information
+- **System Footer** - Status indicators and copyright
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## Tech Stack
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Framework**: React 18 with TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
+- **UI Components**: shadcn/ui
+- **Animation**: Framer Motion
+- **State Management**: TanStack Query
+- **Routing**: React Router
+- **Testing**: Vitest + Playwright
+- **Icons**: Lucide React
 
-**Use your preferred IDE**
+## Getting Started
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Prerequisites
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- Node.js (v18 or higher)
+- npm, yarn, or bun
 
-Follow these steps:
+### Installation
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
+```bash
+# Clone the repository
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Navigate to the project directory
+cd portfolio-main
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The development server will start at `http://localhost:8080`.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Available Scripts
 
-**Use GitHub Codespaces**
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server with hot reload |
+| `npm run build` | Build for production |
+| `npm run build:dev` | Build for development |
+| `npm run preview` | Preview production build |
+| `npm run lint` | Run ESLint |
+| `npm run test` | Run unit tests with Vitest |
+| `npm run test:watch` | Run tests in watch mode |
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Project Structure
 
-## What technologies are used for this project?
+```
+portfolio-main/
+├── src/
+│   ├── components/        # React components
+│   │   ├── ui/           # shadcn/ui components
+│   │   ├── ContactUplink.tsx
+│   │   ├── EnergyBar.tsx
+│   │   ├── ExperienceLog.tsx
+│   │   ├── HeroSection.tsx
+│   │   ├── PortfolioSection.tsx
+│   │   ├── ProvenSpeed.tsx
+│   │   ├── SystemFooter.tsx
+│   │   ├── SystemHeader.tsx
+│   │   └── TechArsenal.tsx
+│   ├── hooks/            # Custom React hooks
+│   ├── lib/              # Utility functions
+│   ├── pages/            # Page components
+│   ├── test/             # Test files
+│   ├── App.tsx           # Main app component
+│   └── main.tsx          # Entry point
+├── public/               # Static assets
+├── index.html            # HTML template
+└── package.json          # Dependencies
+```
 
-This project is built with:
+## Design System
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+The site uses a custom cyberpunk-inspired design system:
 
-## How can I deploy this project?
+- **Typography**: Monospace fonts with tight tracking
+- **Colors**: Dark backgrounds with high-contrast foregrounds
+- **Effects**: Scanlines, glitch animations, energy bars
+- **Layout**: Container-based with generous padding
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+## Deployment
 
-## Can I connect a custom domain to my Lovable project?
+Build the project for production:
 
-Yes, you can!
+```bash
+npm run build
+```
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+The `dist/` folder will contain the static files ready for deployment to any static hosting service (Vercel, Netlify, GitHub Pages, etc.).
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## License
+
+Private - All rights reserved.
+
+---
+
+Built with TypeScript and speed. © 2026 Christopher Henrico.
