@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 2%;
+    --foreground: 0 0% 88%;
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 88%;
+    --popover: 0 0% 6%;
+    --popover-foreground: 0 0% 88%;
+    --primary: 184 100% 50%;
+    --primary-foreground: 0 0% 2%;
+    --secondary: 228 100% 59%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 55%;
+    --accent: 340 100% 50%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 340 100% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 100% / 0.15;
+    --input: 0 0% 100% / 0.15;
+    --ring: 184 100% 50%;
+    --radius: 2px;
+    --sidebar-background: 0 0% 4%;
+    --sidebar-foreground: 0 0% 88%;
+    --sidebar-primary: 184 100% 50%;
+    --sidebar-primary-foreground: 0 0% 2%;
+    --sidebar-accent: 0 0% 10%;
+    --sidebar-accent-foreground: 0 0% 88%;
+    --sidebar-border: 0 0% 100% / 0.1;
+    --sidebar-ring: 184 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'IBM Plex Sans', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer utilities {
+  .font-mono-display {
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .font-body {
+    font-family: 'IBM Plex Sans', sans-serif;
+  }
+}
+
+/* Scanline overlay */
+.scanline {
+  background: linear-gradient(
+    to bottom,
+    transparent 50%,
+    rgba(0, 240, 255, 0.015) 50%
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+}
+
+/* Dot grid background */
+.dot-grid {
+  background-image: radial-gradient(hsl(0 0% 20%) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* CRT flicker animation */
+@keyframes glitch-in {
+  0% { opacity: 0; }
+  10% { opacity: 0.8; }
+  20% { opacity: 0.2; }
+  30% { opacity: 0.9; }
+  40% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 4px hsl(184 100% 50% / 0.3); }
+  50% { box-shadow: 0 0 12px hsl(184 100% 50% / 0.6); }
+}
+
+@keyframes scroll-fill {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@keyframes stamina-flash {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.animate-glitch-in {
+  animation: glitch-in 0.4s cubic-bezier(0.2, 1, 0.3, 1) forwards;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-stamina-flash {
+  animation: stamina-flash 0.5s ease-in-out 3;
+}
+
+/* Cyberpunk cut corner button */
+.cyber-cut {
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 90% 100%, 0 100%);
+}
+
+/* Active button press */
+.cyber-btn {
+  box-shadow: 2px 2px 0px hsl(184 100% 50% / 0.5);
+  transition: all 0.15s cubic-bezier(0.2, 1, 0.3, 1);
+}
+.cyber-btn:active {
+  box-shadow: 0px 0px 0px transparent;
+  transform: translate(2px, 2px);
+}
+
+/* Status dot */
+.status-active {
+  @apply w-2 h-2 rounded-full bg-primary;
+  box-shadow: 0 0 6px hsl(184 100% 50% / 0.6);
+}
